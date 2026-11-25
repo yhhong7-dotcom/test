@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공무원 인사교류 활성화 및 채용제도 개선 입법예고 - 행정안전부 보도자료</title>
+  <!-- Tailwind CSS 로드 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Pretendard 대체용 가독성 높은 Noto Sans KR 및 Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            gov: {
+              navy: '#0F2B5B',      /* 대한민국 정부 공식 딥 네이비 */
+              blue: '#1D56BC',      /* 공공기관 신뢰 블루 */
+              light: '#F2F6FC',     /* 부드러운 배경 블루 */
+              border: '#D5E0F2',    /* 은은한 구분선 */
+              accent: '#C8102E',    /* 태극 레드 포인트 */
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* 인쇄 시 불필요한 버튼 숨김 및 가독성 최적화 */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      .print-shadow-none {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gov-blue selection:text-white">
+
+  <!-- 최상단 대한민국 정부 공식 배너 -->
+  <div class="bg-slate-100 border-b border-slate-200 text-xs sm:text-sm text-slate-600 no-print">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <!-- 태극 심볼 SVG 아이콘 -->
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="18" fill="#FFFFFF"/>
+          <path d="M18 2C9.16344 2 2 9.16344 2 18C2 22.4183 5.58172 26 10 26C14.4183 26 18 22.4183 18 18C18 13.5817 21.5817 10 26 10C30.4183 10 34 13.5817 34 18C34 9.16344 26.8366 2 18 2Z" fill="#CD2E3A"/>
+          <path d="M18 34C26.8366 34 34 26.8366 34 18C34 13.5817 30.4183 10 26 10C21.5817 10 18 13.5817 18 18C18 22.4183 14.4183 26 10 26C5.58172 26 2 22.4183 2 18C2 26.8366 9.16344 34 18 34Z" fill="#0047A0"/>
+        </svg>
+        <span class="font-medium text-slate-700">이 누리집은 대한민국 공식 전자정부 보도자료 안내 페이지입니다.</span>
+      </div>
+      <span class="hidden sm:inline-block text-slate-500">코드: 260511</span>
+    </div>
+  </div>
+
+  <!-- 기관 헤더 및 빠른 이동 내비게이션 -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm no-print">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-gov-navy text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:bg-gov-blue transition-colors">
+          행안
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base sm:text-lg font-bold text-gov-navy tracking-tight leading-none">행정안전부</span>
+          <span class="text-[11px] text-slate-500 mt-0.5 font-medium">Ministry of the Interior and Safety</span>
+        </div>
+      </a>
+
+      <!-- 섹션 바로가기 메뉴 -->
+      <nav aria-label="주요 섹션 이동" class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-600">
+        <a href="#section-incentive" class="px-3 py-2 rounded-lg hover:bg-gov-light hover:text-gov-navy transition-colors">1. 인사 인센티브</a>
+        <a href="#section-recruitment" class="px-3 py-2 rounded-lg hover:bg-gov-light hover:text-gov-navy transition-colors">2. 채용제도 개선</a>
+        <a href="#section-schedule" class="px-3 py-2 rounded-lg hover:bg-gov-light hover:text-gov-navy transition-colors">시행 일정</a>
+      </nav>
+
+      <!-- 글자 크기 조절 & 인쇄 유틸리티 -->
+      <div class="flex items-center gap-1.5">
+        <button type="button" onclick="adjustFontSize(-1)" title="글자 축소" aria-label="글자 축소" class="p-2 text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+          가-
+        </button>
+        <button type="button" onclick="adjustFontSize(1)" title="글자 확대" aria-label="글자 확대" class="p-2 text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+          가+
+        </button>
+        <button type="button" onclick="window.print()" title="보도자료 인쇄" class="ml-1 px-3 py-2 text-xs sm:text-sm font-medium text-gov-navy bg-gov-light hover:bg-blue-100 rounded-lg flex items-center gap-1.5 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+          </svg>
+          <span class="hidden sm:inline">인쇄하기</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠 컨테이너 -->
+  <main id="top" class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+
+    <!-- 보도자료 상단 타이틀 & 메타 정보 카드 -->
+    <article id="article-content" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden print-shadow-none">
+      
+      <!-- 상단 포인트 바 -->
+      <div class="h-2 bg-gradient-to-r from-gov-navy via-gov-blue to-blue-500"></div>
+
+      <div class="p-6 sm:p-10">
+        <!-- 메타 정보 배지 및 발행 정보 -->
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm text-slate-600 mb-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full font-semibold bg-gov-navy text-white">
+            행정안전부 보도자료
+          </span>
+          <span class="text-slate-300 hidden sm:inline">|</span>
+          <span class="font-medium text-slate-700">발표일: <time datetime="2026-05-11">2026. 5. 11.</time></span>
+          <span class="text-slate-300">|</span>
+          <span class="font-medium text-slate-700">담당부서: 지방인사제도과</span>
+        </div>
+
+        <!-- 필수 요소 2: 상단 보도자료 H1 제목 -->
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 leading-snug tracking-tight mb-6">
+          공무원 인사교류 활성화 및 채용제도 개선 입법예고
+        </h1>
+
+        <!-- 핵심 요약 카드 (한눈에 보는 3대 핵심 변화) -->
+        <div class="bg-gov-light border border-gov-border rounded-xl p-5 sm:p-6 mb-8">
+          <div class="flex items-center gap-2 mb-3.5">
+            <span class="w-6 h-6 rounded-full bg-gov-blue text-white flex items-center justify-center text-xs font-bold shrink-0">핵심</span>
+            <h2 class="text-base sm:text-lg font-bold text-gov-navy">한눈에 보는 주요 개정 내용</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+            <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-xs">
+              <div class="text-xs font-semibold text-gov-blue mb-1">승진 혜택 강화</div>
+              <p class="text-sm font-medium text-slate-800 leading-relaxed">
+                핵심 인사교류 직위·민간기업 전담공무원 대상 <strong class="text-gov-navy font-bold">승진 소요 연수 최대 1년 단축</strong>
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-xs">
+              <div class="text-xs font-semibold text-gov-blue mb-1">특별승진 및 보상 보장</div>
+              <p class="text-sm font-medium text-slate-800 leading-relaxed">
+                1년 이상 우수 근무자 <strong class="text-gov-navy font-bold">특별승진 부여</strong>, 근무성적 '우' 이상·성과급 'A' 이상 의무 보장
+              </p>
+            </div>
+            <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-xs">
+              <div class="text-xs font-semibold text-gov-blue mb-1">수험생 부담 완화</div>
+              <p class="text-sm font-medium text-slate-800 leading-relaxed">
+                2027년부터 8급 공채 한국사를 <strong class="text-gov-navy font-bold">'한국사능력검정시험(3급 이상)'</strong>으로 대체
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 보도자료 도입부 본문 -->
+        <div class="space-y-4 text-slate-700 leading-relaxed text-base sm:text-[17px] border-b border-slate-200 pb-8 mb-8">
+          <p>
+            행정안전부(장관 윤호중)는 중앙부처·지방정부·민간기업 간 벽을 허무는 <strong>'프로젝트 기반 인사교류'</strong> 활성화를 위해 교류 참여자에게 파격적인 인사 혜택을 제공하는 내용의 <strong>「지방공무원 임용령」·「지방공무원 평정규칙」 개정안</strong>을 5월 11일(월)부터 6월 10일(화)까지 입법예고한다고 밝혔다.
+          </p>
+          <p>
+            이번 개정안은 지난해 발표된 '공직 역량 강화 태스크포스' 운영 성과를 법령에 반영한 것으로, 국책사업이나 지역 현안 대응을 위해 신설되는 '핵심 인사교류' 직위 근무자와 지역 투자 유치를 전담하는 '민간기업 전담공무원'에게 구체적이고 실질적인 인센티브를 부여해 공직사회 경쟁력을 높이는 데 목적이 있다.
+          </p>
+        </div>
+
+        <!-- 필수 요소 3 & 4: 섹션 1 - 1. 인사 인센티브 -->
+        <section id="section-incentive" aria-labelledby="heading-incentive" class="mb-10 scroll-mt-24">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-gov-navy pb-3 mb-5">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-lg bg-gov-navy text-white text-sm font-bold tracking-wide">SECTION 01</span>
+              <h2 id="heading-incentive" class="text-xl sm:text-2xl font-bold text-gov-navy">
+                1. 인사 인센티브
+              </h2>
+            </div>
+            <span class="text-sm font-semibold text-gov-blue">파격적인 승진·평가 인센티브</span>
+          </div>
+
+          <p class="text-slate-600 mb-5 text-sm sm:text-base">
+            이번 개정안의 핵심은 교류 공무원에 대한 확실한 보상 체계 마련입니다.
+          </p>
+
+          <!-- 섹션 1 주요 내용 목록 (<ul>) -->
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">승진 소요 연수 단축</strong>: 핵심 인사교류 직위 또는 민간기업 전담공무원으로 근무할 경우, 해당 직위 교류 기간의 절반을 최대 1년 범위 내에서 승진 소요 연수에서 감면합니다.
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">특별승진 기회 부여</strong>: 해당 직위에서 1년 이상 근무하며 우수한 성과를 낸 공무원에게는 특별승진의 기회를 부여합니다.
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">대우공무원 혜택 확대</strong>: 기존에 인사교류자에게만 적용되던 '대우공무원 산정 시 교류 기간 경력 100% 단축' 혜택을 민간기업 전담공무원에게도 동일하게 확대 적용합니다.
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">평가·성과급 보장</strong>: 인사교류자는 일반 공무원과 평정 단위를 분리해 근무성적평정에서 최소 '우' 등급, 성과급에서 최소 'A' 등급을 의무 보장받습니다. 최상위 등급 우수 성과자에게는 특별성과가산금도 지급할 수 있는 근거를 마련합니다.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 필수 요소 3 & 4: 섹션 2 - 2. 채용제도 개선 -->
+        <section id="section-recruitment" aria-labelledby="heading-recruitment" class="mb-10 scroll-mt-24">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b-2 border-gov-navy pb-3 mb-5">
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-lg bg-gov-navy text-white text-sm font-bold tracking-wide">SECTION 02</span>
+              <h2 id="heading-recruitment" class="text-xl sm:text-2xl font-bold text-gov-navy">
+                2. 채용제도 개선
+              </h2>
+            </div>
+            <span class="text-sm font-semibold text-gov-blue">수험생 부담 완화 및 우수 인재 채용 확대</span>
+          </div>
+
+          <p class="text-slate-600 mb-5 text-sm sm:text-base">
+            지방공무원 공채 및 경력경쟁 채용 제도도 시대 흐름에 맞게 개선됩니다.
+          </p>
+
+          <!-- 섹션 2 주요 내용 목록 (<ul>) -->
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">8급 한국사 과목 대체</strong>: 수험생의 부담을 덜고 채용시험 간 호환성을 높이기 위해 2027년부터 8급 공채 한국사 과목을 9급과 동일하게 '한국사능력검정시험(3급 이상)'으로 대체합니다.
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">경력 단축 및 직급 확대</strong>: 최신 경력 반영이 중요한 특정 분야 경채시험의 경우 필요 경력을 1년 범위 내에서 단축할 수 있는 근거를 마련하고, 현행 8급 이하로 운영하던 우수 인재 추천채용제 대상 직급을 7급까지 확대합니다.
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-slate-50 hover:bg-gov-light/60 transition-colors p-4 sm:p-5 rounded-xl border border-slate-200/80">
+              <span class="w-6 h-6 rounded-full bg-gov-blue/10 text-gov-blue flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </span>
+              <div class="leading-relaxed text-slate-700 text-sm sm:text-base">
+                <strong class="text-slate-900 font-bold text-base sm:text-[17px]">취약 청년 공직 진출 지원</strong>: 9급 공채 저소득층 구분모집 대상에 '자립준비청년'과 '보호기간 연장청년'을 신규 추가합니다. 또한 기초생활수급자·한부모가족 지원 대상자에게 요구되던 2년 이상의 자격 유지 기간을 1년으로 완화합니다.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 필수 요소 5: 윤호중 행정안전부 장관 인용구 (<blockquote>) -->
+        <section aria-label="장관 말씀" class="mb-10">
+          <blockquote class="relative bg-gradient-to-br from-gov-navy to-[#163B7A] text-white rounded-2xl p-6 sm:p-8 shadow-md">
+            <!-- 큰따옴표 장식 아이콘 -->
+            <svg class="w-10 h-10 text-blue-300/30 mb-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+            <p class="text-base sm:text-lg md:text-xl font-medium leading-relaxed text-blue-50 mb-5">
+              “이번 조치는 프로젝트 기반 인사교류를 통해 대규모 국책사업 등에 참여하는 공무원에게 파격적인 인센티브를 부여해 보다 성공적인 사업 추진을 돕기 위한 것”이라며, “앞으로도 공직사회의 개방성을 확대하고 활력을 제고할 수 있도록 지방인사제도를 적극적으로 개선해 나가겠다”
+            </p>
+            <footer class="flex items-center gap-3 border-t border-blue-400/30 pt-4">
+              <div class="w-2 h-2 rounded-full bg-blue-300"></div>
+              <cite class="not-italic font-bold text-sm sm:text-base text-white tracking-wide">
+                윤호중 행정안전부 장관
+              </cite>
+            </footer>
+          </blockquote>
+        </section>
+
+        <!-- 필수 요소 6: 시행 일정 안내 섹션 -->
+        <section id="section-schedule" aria-labelledby="heading-schedule" class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 scroll-mt-24">
+          <div class="flex items-center gap-2.5 mb-4">
+            <svg class="w-6 h-6 text-gov-blue shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <h2 id="heading-schedule" class="text-lg sm:text-xl font-bold text-slate-900">
+              시행 일정 및 국민 의견 제출 안내
+            </h2>
+          </div>
+
+          <p class="text-slate-700 leading-relaxed text-sm sm:text-base mb-5">
+            개정안은 <strong>2026년 5월 11일(월)부터 6월 10일(화)</strong>까지 입법예고되며, 국민 누구나 <strong>행정안전부 누리집</strong> 또는 <strong>대한민국 전자관보</strong>를 통해 의견을 제출할 수 있습니다. 예고 기간 종료 후 규제심사·법제처 심사를 거쳐 <strong>2026년 하반기 중 공포·시행</strong>될 예정입니다.
+          </p>
+
+          <!-- 단계별 일정 타임라인 카드 -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <span class="inline-block text-xs font-bold text-gov-blue bg-gov-light px-2.5 py-0.5 rounded-md mb-1.5">1단계 · 입법예고</span>
+              <div class="font-bold text-slate-900">2026. 5. 11.(월) ~ 6. 10.(화)</div>
+              <p class="text-xs text-slate-500 mt-1">30일간 국민 의견 수렴 진행</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <span class="inline-block text-xs font-bold text-gov-blue bg-gov-light px-2.5 py-0.5 rounded-md mb-1.5">2단계 · 의견 제출처</span>
+              <div class="font-bold text-slate-900">행정안전부 누리집 · 전자관보</div>
+              <p class="text-xs text-slate-500 mt-1">국민 누구나 온라인 의견 제출 가능</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-200">
+              <span class="inline-block text-xs font-bold text-gov-blue bg-gov-light px-2.5 py-0.5 rounded-md mb-1.5">3단계 · 공포 및 시행</span>
+              <div class="font-bold text-slate-900">2026년 하반기 예정</div>
+              <p class="text-xs text-slate-500 mt-1">규제심사 및 법제처 심사 후 시행</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <!-- 필수 요소 6: 하단 푸터 (담당부서 정보 및 시민 편의 버튼) -->
+    <footer class="mt-8 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        
+        <!-- 담당부서 안내 -->
+        <div class="space-y-1.5">
+          <div class="inline-flex items-center gap-2 text-xs font-bold text-gov-navy bg-gov-light px-3 py-1 rounded-md">
+            보도자료 문의처
+          </div>
+          <p class="text-sm sm:text-base font-bold text-slate-900 pt-1">
+            행정안전부 지방인사제도과 김정민
+            <span class="font-normal text-slate-600 ml-1">(☎ 044-205-3347)</span>
+          </p>
+          <p class="text-xs text-slate-500">
+            본 보도자료는 시민의 알 권리 보장과 정책 이해를 돕기 위해 제작되었습니다.
+          </p>
+        </div>
+
+        <!-- 시민 편의 액션 버튼 그룹 -->
+        <div class="flex flex-wrap items-center gap-2.5 no-print">
+          <button type="button" onclick="copyPageLink()" class="px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-sm font-medium flex items-center gap-2 transition-colors">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+            <span>주소 복사</span>
+          </button>
+
+          <button type="button" onclick="window.print()" class="px-4 py-2.5 rounded-xl border border-gov-blue/30 bg-gov-light hover:bg-blue-100 text-gov-navy text-sm font-semibold flex items-center gap-2 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+            </svg>
+            <span>인쇄하기</span>
+          </button>
+
+          <a href="#top" class="px-4 py-2.5 rounded-xl bg-gov-navy hover:bg-gov-blue text-white text-sm font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+            <span>상단으로 이동</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- 알림 메시지 토스트 (alert 대체) -->
+  <div id="toast-message" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-sm font-medium px-5 py-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    알림 메시지
+  </div>
+
+  <script>
+    // 본문 가독성을 위한 글자 크기 조절 기능
+    let currentFontScale = 100;
+    function adjustFontSize(delta) {
+      currentFontScale = Math.min(125, Math.max(90, currentFontScale + delta * 5));
+      document.documentElement.style.fontSize = currentFontScale + '%';
+      showToast(`화면 글자 크기가 ${currentFontScale}%로 조정되었습니다.`);
+    }
+
+    // 페이지 URL 클립보드 복사 기능 (iframe 환경 호환)
+    function copyPageLink() {
+      const tempInput = document.createElement('input');
+      tempInput.value = window.location.href;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast('보도자료 페이지 주소가 복사되었습니다.');
+      } catch (err) {
+        showToast('주소 복사에 실패했습니다.');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // 커스텀 토스트 알림 표시
+    let toastTimer;
+    function showToast(message) {
+      const toast = document.getElementById('toast-message');
+      toast.textContent = message;
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
